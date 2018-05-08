@@ -55,10 +55,10 @@ const observe = instance => {
     node._onLayoutId = id;
     resizeObserver.observe(node);
   } else {
-    const id = guid();
     instance._onLayoutId = id;
-    instance._handleLayout();
   }
+
+  instance._handleLayout();
 };
 
 const unobserve = instance => {
